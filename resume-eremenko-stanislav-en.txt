@@ -45,19 +45,10 @@ Microcontroller Programming Intern — INTAS COMPANY LLC
 - Contributed to an automated setup for the oil and gas industry.
 - Ubuntu/Debian, Docker, systemd, Nginx, backups, monitoring; local services and a GPU environment for ML.
 
-ML / LLM practice (pilots, coursework, personal projects):
+Projects:
 - Local GPT: Ollama + Open WebUI, Llama 3.1, Qwen 2.5, Mistral. Notes and documents without the cloud.
-- RAG over personal notes: LangChain + Chroma/Qdrant + Ollama. Used daily.
-- Coding assistant: Continue.dev + Qwen Coder locally. Used at work.
-- Telegram bot for a local LLM: aiogram + Ollama API, history in SQLite.
-- Knowledge-base RAG assistant: Confluence/Notion/PDF, Qdrant/FAISS, answers grounded in sources. Pilot.
-- Ticket classification: RuBERT/RoBERTa + CatBoost, LLM summary, Jira/Bitrix24 API. Coursework/pilot.
-- Document data extraction: OCR + LLM, Pydantic, confidence score. Invoice pilot.
-- Text-to-SQL: LLM, read-only, validation. Pilot, simple queries.
-- Meeting summarization: Whisper + LLM, Pydantic, Notion/Telegram. Personal project.
-- Long-document summarization: map-reduce, PyMuPDF. Personal project.
-- LLM fine-tuning: LoRA/QLoRA for LLaMA/Mistral. Learning experiments.
-- RAG evaluation: manual labels, precision, recall, share of automatic answers.
+- Cattle video monitoring (bachelor thesis): video analytics — activity (feeding/watering), sleep analysis, body condition scoring (BCS). YOLOv8, OpenCV, PyTorch, PyQt6, PostgreSQL.
+  GitHub: https://github.com/Eremenko-S-V/diplom_cow_tracking
 
 Education:
 Ufa University of Science and Technology

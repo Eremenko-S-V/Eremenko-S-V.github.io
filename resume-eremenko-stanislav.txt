@@ -45,19 +45,10 @@ ML-разработка:
 - Участие в разработке автоматизированной установки для нефтегаза.
 - Ubuntu/Debian, Docker, systemd, Nginx, бэкапы, мониторинг; локальные сервисы и GPU-окружение для ML.
 
-ML / LLM практика (пилоты, учебные задачи, личные проекты):
+Проекты:
 - Локальный GPT: Ollama + Open WebUI, Llama 3.1, Qwen 2.5, Mistral. Использую для заметок и документов без облака.
-- RAG по личным заметкам: LangChain + Chroma/Qdrant + Ollama. Использую ежедневно.
-- Помощник для кода: Continue.dev + Qwen Coder локально. Использую в работе.
-- Telegram-бот к локальной LLM: aiogram + Ollama API, история в SQLite.
-- RAG-ассистент по базе знаний: Confluence/Notion/PDF, Qdrant/FAISS, ответы только по источникам. Пилот.
-- Классификация обращений: RuBERT/RoBERTa + CatBoost, LLM-summary, API Jira/Bitrix24. Учебный/пилот.
-- Извлечение данных из документов: OCR + LLM, Pydantic, confidence score. Пилот на счетах.
-- Text-to-SQL: LLM, read-only, валидация. Пилот, простые запросы.
-- Суммаризация встреч: Whisper + LLM, Pydantic, Notion/Telegram. Личный проект.
-- Суммаризация длинных документов: map-reduce, PyMuPDF. Личный проект.
-- Дообучение LLM: LoRA/QLoRA для LLaMA/Mistral. Учебные эксперименты.
-- Оценка RAG: ручная разметка, точность, полнота, доля автоответов.
+- Мониторинг КРС по видео (ВКР): видеоаналитика — активность (кормление/водопой), анализ сна, оценка упитанности (BCS). YOLOv8, OpenCV, PyTorch, PyQt6, PostgreSQL.
+  GitHub: https://github.com/Eremenko-S-V/diplom_cow_tracking
 
 Образование:
 Уфимский университет науки и технологий

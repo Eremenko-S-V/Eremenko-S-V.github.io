@@ -41,6 +41,7 @@
             </div>
             <div class="hero-actions">
                 <div class="lang-switch" role="group" aria-label="Language">
+                    <span class="lang-thumb" aria-hidden="true"></span>
                     <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
                     <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
                 </div>
@@ -122,8 +123,8 @@
         </section>
 
         <section class="card">
-            <h2 data-i18n="practice.title">ML / LLM практика</h2>
-            <p class="lead" data-i18n="practice.lead">Пилоты, учебные задачи и личные проекты. Не продакшен, если не сказано иначе.</p>
+            <h2 data-i18n="practice.title">Проекты</h2>
+            <p class="lead" data-i18n="practice.lead">Ключевые работы: прикладное компьютерное зрение и локальный LLM-стек.</p>
             <div class="project-grid">
                 <article class="project-item">
                     <h3 data-i18n="p1.title">Локальный GPT</h3>
@@ -131,59 +132,10 @@
                     <p data-i18n="p1.text">Ollama + Open WebUI: Llama 3.1, Qwen 2.5, Mistral. Работа с заметками и документами без облака.</p>
                 </article>
                 <article class="project-item">
-                    <h3 data-i18n="p2.title">RAG по личным заметкам</h3>
-                    <p class="status" data-i18n="p2.status">Личный проект, каждый день</p>
-                    <p data-i18n="p2.text">LangChain + Chroma/Qdrant + Ollama, ответы по PDF и Markdown.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p3.title">Помощник для кода</h3>
-                    <p class="status" data-i18n="p3.status">Использую в работе</p>
-                    <p data-i18n="p3.text">Continue.dev + Qwen Coder локально: автодополнение и рефакторинг.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p4.title">Telegram-бот к локальной LLM</h3>
-                    <p class="status" data-i18n="p4.status">Личный проект</p>
-                    <p data-i18n="p4.text">aiogram + Ollama API, доступ с телефона, история в SQLite.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p5.title">RAG-ассистент по базе знаний</h3>
-                    <p class="status" data-i18n="p5.status">Пилот</p>
-                    <p data-i18n="p5.text">Парсинг Confluence / Notion / PDF, чанкинг, эмбеддинги, поиск в Qdrant/FAISS, ответы только по источникам, fallback на оператора.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p6.title">Классификация обращений</h3>
-                    <p class="status" data-i18n="p6.status">Учебный / пилот</p>
-                    <p data-i18n="p6.text">RuBERT/RoBERTa + CatBoost, сущности, LLM для summary и черновика ответа. Интеграция с Jira/Bitrix24 на уровне API.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p7.title">Извлечение данных из документов</h3>
-                    <p class="status" data-i18n="p7.status">Пилот</p>
-                    <p data-i18n="p7.text">OCR + LLM, схемы через Pydantic, confidence score, ручная проверка. Типовые счета.</p>
-                </article>
-                <article class="project-item">
-                    <h3>Text-to-SQL</h3>
-                    <p class="status" data-i18n="p8.status">Пилот</p>
-                    <p data-i18n="p8.text">LLM генерирует SQL по схеме БД, только read-only, с валидацией. Хорошо работает на простых запросах.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p9.title">Суммаризация встреч</h3>
-                    <p class="status" data-i18n="p9.status">Личный проект</p>
-                    <p data-i18n="p9.text">Whisper + LLM: резюме, решения, action items. Структурирование через Pydantic, отправка в Notion/Telegram.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p10.title">Суммаризация длинных документов</h3>
-                    <p class="status" data-i18n="p10.status">Личный проект</p>
-                    <p data-i18n="p10.text">Map-reduce через LLM, PyMuPDF, сохранение в Markdown.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p11.title">Дообучение LLM</h3>
-                    <p class="status" data-i18n="p11.status">Учебные эксперименты</p>
-                    <p data-i18n="p11.text">LoRA / QLoRA для LLaMA и Mistral, промпт-инжиниринг, оценка качества.</p>
-                </article>
-                <article class="project-item">
-                    <h3 data-i18n="p12.title">Оценка RAG</h3>
-                    <p class="status" data-i18n="p12.status">Для пилота</p>
-                    <p data-i18n="p12.text">Ручная разметка, точность, полнота и доля автоматических ответов.</p>
+                    <h3 data-i18n="cow.title">Мониторинг КРС по видео</h3>
+                    <p class="status" data-i18n="cow.status">Дипломный проект (ВКР)</p>
+                    <p data-i18n="cow.text">Система видеоаналитики: активность животных (кормление / водопой), анализ сна и оценка упитанности (BCS) по видео. YOLOv8, OpenCV, PyTorch, PyQt6, PostgreSQL.</p>
+                    <a class="project-link" href="https://github.com/Eremenko-S-V/diplom_cow_tracking" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </article>
             </div>
         </section>

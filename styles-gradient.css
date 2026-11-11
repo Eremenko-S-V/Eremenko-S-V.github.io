@@ -125,32 +125,58 @@ h1 { font-size: 34px; line-height: 1.2; margin-bottom: 4px; }
 }
 
 .lang-switch {
-    display: inline-flex;
-    border: 1px solid #c7d2fe;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 118px;
+    padding: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(199, 210, 254, 0.9);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7), 0 10px 24px rgba(79, 70, 229, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.lang-thumb {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.32);
+    transition: transform 0.28s cubic-bezier(.22, 1, .36, 1);
+    pointer-events: none;
+}
+
+html[data-lang="en"] .lang-thumb {
+    transform: translateX(100%);
 }
 
 .lang-btn {
+    position: relative;
+    z-index: 1;
     border: none;
     background: transparent;
-    padding: 7px 12px;
+    padding: 8px 14px;
     font-weight: 700;
     font-size: 12px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     cursor: pointer;
-    color: var(--brand);
+    color: #4338ca;
     font-family: inherit;
-}
-
-.lang-btn + .lang-btn {
-    border-left: 1px solid #c7d2fe;
+    border-radius: 999px;
+    transition: color 0.2s ease;
 }
 
 .lang-btn.active {
-    background: linear-gradient(90deg, var(--brand), var(--brand-2));
     color: #fff;
+}
+
+.lang-btn:focus-visible {
+    outline: 2px solid #818cf8;
+    outline-offset: 2px;
 }
 
 .btn {
@@ -260,6 +286,18 @@ li + li { margin-top: 6px; }
 .project-item p {
     font-size: 14px;
     color: var(--muted);
+}
+
+.project-link {
+    display: inline-flex;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--brand), var(--brand-2));
 }
 
 .metric {
