@@ -112,8 +112,45 @@ h1 { font-size: 34px; line-height: 1.2; margin-bottom: 4px; }
 
 .hero-actions {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.hero-buttons {
+    display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.lang-switch {
+    display: inline-flex;
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    padding: 7px 12px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--brand);
+    font-family: inherit;
+}
+
+.lang-btn + .lang-btn {
+    border-left: 1px solid #c7d2fe;
+}
+
+.lang-btn.active {
+    background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    color: #fff;
 }
 
 .btn {
@@ -270,6 +307,12 @@ li + li { margin-top: 6px; }
     .hero {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .hero-actions,
+    .hero-buttons {
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .grid-top,

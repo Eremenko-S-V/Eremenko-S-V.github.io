@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Резюме Еременко Станислав — Junior ML / Data Science, Казань. Опыт, образование, навыки и контакты.">
-    <title>Резюме — Еременко Станислав | ML / Data Science</title>
+    <meta name="description" data-i18n="meta.description" content="Резюме Еременко Станислав — Junior ML / Data Science, Казань. Опыт, образование, навыки и контакты.">
+    <title data-i18n="meta.title">Резюме — Еременко Станислав | ML / Data Science</title>
     <link rel="stylesheet" href="styles-gradient.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        (function () {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var queryLang = params.get('lang');
+                var saved = localStorage.getItem('resume-lang');
+                var lang = queryLang === 'en' || queryLang === 'ru' ? queryLang : saved;
+                if (lang === 'en' || lang === 'ru') {
+                    document.documentElement.lang = lang;
+                    document.documentElement.dataset.lang = lang;
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
     <div class="blob one"></div>
@@ -18,33 +32,39 @@
     <main class="resume">
         <section class="hero card">
             <div class="hero-left">
-                <div class="avatar-circle">ЕС</div>
+                <div class="avatar-circle" data-i18n="hero.initials">ЕС</div>
                 <div>
-                    <p class="label">Открыт к предложениям</p>
-                    <h1>ЕРЕМЕНКО СТАНИСЛАВ</h1>
-                    <p class="subtitle">Junior ML / Data Science · Казань</p>
+                    <p class="label" data-i18n="hero.status">Открыт к предложениям</p>
+                    <h1 data-i18n="hero.name">ЕРЕМЕНКО СТАНИСЛАВ</h1>
+                    <p class="subtitle" data-i18n="hero.subtitle">Junior ML / Data Science · Казань</p>
                 </div>
             </div>
             <div class="hero-actions">
-                <a class="btn primary" href="https://github.com/Eremenko-S-V" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="btn" href="mailto:e.stasik2004@mail.ru">Email</a>
-                <a class="btn" href="tel:+79279436361">Телефон</a>
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
+                    <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <div class="hero-buttons">
+                    <a class="btn primary" href="https://github.com/Eremenko-S-V" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="btn" href="mailto:e.stasik2004@mail.ru">Email</a>
+                    <a class="btn" href="tel:+79279436361" data-i18n="hero.phone">Телефон</a>
+                </div>
             </div>
         </section>
 
         <section class="grid-top">
             <article class="card">
-                <h2>Профиль</h2>
-                <p>Junior-специалист по машинному обучению и анализу данных. Сейчас веду грантовый проект: оптический поток, поля деформаций и измерительная установка. Параллельно собираю пилоты по RAG, LLM и локальным моделям. Быстро включаюсь в задачи и довожу работу до рабочего результата.</p>
+                <h2 data-i18n="profile.title">Профиль</h2>
+                <p data-i18n="profile.text">Junior-специалист по машинному обучению и анализу данных. Сейчас веду грантовый проект: оптический поток, поля деформаций и измерительная установка. Параллельно собираю пилоты по RAG, LLM и локальным моделям. Быстро включаюсь в задачи и довожу работу до рабочего результата.</p>
                 <ul class="facts">
-                    <li>Город: Казань</li>
-                    <li>Формат: стажировка или junior</li>
-                    <li>Готов учиться на реальных задачах</li>
+                    <li data-i18n="profile.city">Город: Казань</li>
+                    <li data-i18n="profile.format">Формат: стажировка или junior</li>
+                    <li data-i18n="profile.learn">Готов учиться на реальных задачах</li>
                 </ul>
             </article>
 
             <article class="card">
-                <h2>Ключевые навыки</h2>
+                <h2 data-i18n="skills.title">Ключевые навыки</h2>
                 <div class="tags">
                     <span>Python</span><span>C</span><span>SQL</span><span>PostgreSQL</span>
                     <span>Machine Learning</span><span>Computer Vision</span><span>NLP</span>
@@ -55,151 +75,152 @@
         </section>
 
         <section class="card">
-            <h2>Опыт</h2>
+            <h2 data-i18n="experience.title">Опыт</h2>
             <div class="timeline-item">
                 <div class="timeline-head">
-                    <h3>ML-разработчик, руководитель проекта</h3>
-                    <p>Грант «Умник» · 10.05.2026 — настоящее время</p>
+                    <h3 data-i18n="exp.umnik.role">ML-разработчик, руководитель проекта</h3>
+                    <p data-i18n="exp.umnik.meta">Грант «Умник» · 10.05.2026 — настоящее время</p>
                 </div>
-                <p class="lead">Автоматизированная измерительная установка: стереозрение, оптический поток и оценка механических свойств.</p>
+                <p class="lead" data-i18n="exp.umnik.lead">Автоматизированная измерительная установка: стереозрение, оптический поток и оценка механических свойств.</p>
                 <div class="work-block">
-                    <h4>Руководство проектом</h4>
+                    <h4 data-i18n="exp.umnik.mgmt">Руководство проектом</h4>
                     <ul>
-                        <li>Собрал команду, распределил роли и задачи.</li>
-                        <li>Планирую этапы разработки, контролирую сроки и результаты.</li>
-                        <li>Готовлю отчётность перед фондом и защищаю промежуточные итоги.</li>
-                        <li>Организую работу над измерительной установкой.</li>
+                        <li data-i18n="exp.umnik.m1">Собрал команду, распределил роли и задачи.</li>
+                        <li data-i18n="exp.umnik.m2">Планирую этапы разработки, контролирую сроки и результаты.</li>
+                        <li data-i18n="exp.umnik.m3">Готовлю отчётность перед фондом и защищаю промежуточные итоги.</li>
+                        <li data-i18n="exp.umnik.m4">Организую работу над измерительной установкой.</li>
                     </ul>
                 </div>
                 <div class="work-block">
-                    <h4>ML-разработка</h4>
+                    <h4 data-i18n="exp.umnik.ml">ML-разработка</h4>
                     <ul>
-                        <li>Выбираю и адаптирую нейросети оптического потока: SEA-RAFT, ResNet, 4D cost volume.</li>
-                        <li>Обучаю модель на данных механических испытаний, повышаю устойчивость к шумам.</li>
-                        <li>Оцениваю точность, делаю постобработку и считаю механические свойства по 3D-полям деформаций.</li>
-                        <li>Интегрирую ML-часть с оптической системой, стереокамерами и ПО.</li>
+                        <li data-i18n="exp.umnik.ml1">Выбираю и адаптирую нейросети оптического потока: SEA-RAFT, ResNet, 4D cost volume.</li>
+                        <li data-i18n="exp.umnik.ml2">Обучаю модель на данных механических испытаний, повышаю устойчивость к шумам.</li>
+                        <li data-i18n="exp.umnik.ml3">Оцениваю точность, делаю постобработку и считаю механические свойства по 3D-полям деформаций.</li>
+                        <li data-i18n="exp.umnik.ml4">Интегрирую ML-часть с оптической системой, стереокамерами и ПО.</li>
                     </ul>
                 </div>
                 <div class="work-block">
-                    <h4>Интеграция и инженерия</h4>
+                    <h4 data-i18n="exp.umnik.eng">Интеграция и инженерия</h4>
                     <ul>
-                        <li>Связываю стереокамеры, жёсткую базу, мини-ПК на Linux и микроконтроллеры.</li>
-                        <li>Держу воспроизводимость: документирую код и пайплайны.</li>
+                        <li data-i18n="exp.umnik.e1">Связываю стереокамеры, жёсткую базу, мини-ПК на Linux и микроконтроллеры.</li>
+                        <li data-i18n="exp.umnik.e2">Держу воспроизводимость: документирую код и пайплайны.</li>
                     </ul>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-head">
-                    <h3>Стажёр-программист микроконтроллеров</h3>
-                    <p>ООО «ИНТАС КОМПАНИ» · 16.01.2025 — 15.09.2025</p>
+                    <h3 data-i18n="exp.intas.role">Стажёр-программист микроконтроллеров</h3>
+                    <p data-i18n="exp.intas.meta">ООО «ИНТАС КОМПАНИ» · 16.01.2025 — 15.09.2025</p>
                 </div>
                 <ul>
-                    <li>Программировал ESP32 / ESP8266 / Arduino под автоматизацию: датчики, реле, MQTT, уведомления в Telegram.</li>
-                    <li>Участвовал в разработке автоматизированной установки для нефтегаза.</li>
-                    <li>Настраивал Ubuntu/Debian, Docker, systemd, Nginx, бэкапы и мониторинг; поднимал локальные сервисы и GPU-окружение для ML.</li>
+                    <li data-i18n="exp.intas.l1">Программировал ESP32 / ESP8266 / Arduino под автоматизацию: датчики, реле, MQTT, уведомления в Telegram.</li>
+                    <li data-i18n="exp.intas.l2">Участвовал в разработке автоматизированной установки для нефтегаза.</li>
+                    <li data-i18n="exp.intas.l3">Настраивал Ubuntu/Debian, Docker, systemd, Nginx, бэкапы и мониторинг; поднимал локальные сервисы и GPU-окружение для ML.</li>
                 </ul>
             </div>
         </section>
 
         <section class="card">
-            <h2>ML / LLM практика</h2>
-            <p class="lead">Пилоты, учебные задачи и личные проекты. Не продакшен, если не сказано иначе.</p>
+            <h2 data-i18n="practice.title">ML / LLM практика</h2>
+            <p class="lead" data-i18n="practice.lead">Пилоты, учебные задачи и личные проекты. Не продакшен, если не сказано иначе.</p>
             <div class="project-grid">
                 <article class="project-item">
-                    <h3>Локальный GPT</h3>
-                    <p class="status">Личный стек, использую</p>
-                    <p>Ollama + Open WebUI: Llama 3.1, Qwen 2.5, Mistral. Работа с заметками и документами без облака.</p>
+                    <h3 data-i18n="p1.title">Локальный GPT</h3>
+                    <p class="status" data-i18n="p1.status">Личный стек, использую</p>
+                    <p data-i18n="p1.text">Ollama + Open WebUI: Llama 3.1, Qwen 2.5, Mistral. Работа с заметками и документами без облака.</p>
                 </article>
                 <article class="project-item">
-                    <h3>RAG по личным заметкам</h3>
-                    <p class="status">Личный проект, каждый день</p>
-                    <p>LangChain + Chroma/Qdrant + Ollama, ответы по PDF и Markdown.</p>
+                    <h3 data-i18n="p2.title">RAG по личным заметкам</h3>
+                    <p class="status" data-i18n="p2.status">Личный проект, каждый день</p>
+                    <p data-i18n="p2.text">LangChain + Chroma/Qdrant + Ollama, ответы по PDF и Markdown.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Помощник для кода</h3>
-                    <p class="status">Использую в работе</p>
-                    <p>Continue.dev + Qwen Coder локально: автодополнение и рефакторинг.</p>
+                    <h3 data-i18n="p3.title">Помощник для кода</h3>
+                    <p class="status" data-i18n="p3.status">Использую в работе</p>
+                    <p data-i18n="p3.text">Continue.dev + Qwen Coder локально: автодополнение и рефакторинг.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Telegram-бот к локальной LLM</h3>
-                    <p class="status">Личный проект</p>
-                    <p>aiogram + Ollama API, доступ с телефона, история в SQLite.</p>
+                    <h3 data-i18n="p4.title">Telegram-бот к локальной LLM</h3>
+                    <p class="status" data-i18n="p4.status">Личный проект</p>
+                    <p data-i18n="p4.text">aiogram + Ollama API, доступ с телефона, история в SQLite.</p>
                 </article>
                 <article class="project-item">
-                    <h3>RAG-ассистент по базе знаний</h3>
-                    <p class="status">Пилот</p>
-                    <p>Парсинг Confluence / Notion / PDF, чанкинг, эмбеддинги, поиск в Qdrant/FAISS, ответы только по источникам, fallback на оператора.</p>
+                    <h3 data-i18n="p5.title">RAG-ассистент по базе знаний</h3>
+                    <p class="status" data-i18n="p5.status">Пилот</p>
+                    <p data-i18n="p5.text">Парсинг Confluence / Notion / PDF, чанкинг, эмбеддинги, поиск в Qdrant/FAISS, ответы только по источникам, fallback на оператора.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Классификация обращений</h3>
-                    <p class="status">Учебный / пилот</p>
-                    <p>RuBERT/RoBERTa + CatBoost, сущности, LLM для summary и черновика ответа. Интеграция с Jira/Bitrix24 на уровне API.</p>
+                    <h3 data-i18n="p6.title">Классификация обращений</h3>
+                    <p class="status" data-i18n="p6.status">Учебный / пилот</p>
+                    <p data-i18n="p6.text">RuBERT/RoBERTa + CatBoost, сущности, LLM для summary и черновика ответа. Интеграция с Jira/Bitrix24 на уровне API.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Извлечение данных из документов</h3>
-                    <p class="status">Пилот</p>
-                    <p>OCR + LLM, схемы через Pydantic, confidence score, ручная проверка. Типовые счета.</p>
+                    <h3 data-i18n="p7.title">Извлечение данных из документов</h3>
+                    <p class="status" data-i18n="p7.status">Пилот</p>
+                    <p data-i18n="p7.text">OCR + LLM, схемы через Pydantic, confidence score, ручная проверка. Типовые счета.</p>
                 </article>
                 <article class="project-item">
                     <h3>Text-to-SQL</h3>
-                    <p class="status">Пилот</p>
-                    <p>LLM генерирует SQL по схеме БД, только read-only, с валидацией. Хорошо работает на простых запросах.</p>
+                    <p class="status" data-i18n="p8.status">Пилот</p>
+                    <p data-i18n="p8.text">LLM генерирует SQL по схеме БД, только read-only, с валидацией. Хорошо работает на простых запросах.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Суммаризация встреч</h3>
-                    <p class="status">Личный проект</p>
-                    <p>Whisper + LLM: резюме, решения, action items. Структурирование через Pydantic, отправка в Notion/Telegram.</p>
+                    <h3 data-i18n="p9.title">Суммаризация встреч</h3>
+                    <p class="status" data-i18n="p9.status">Личный проект</p>
+                    <p data-i18n="p9.text">Whisper + LLM: резюме, решения, action items. Структурирование через Pydantic, отправка в Notion/Telegram.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Суммаризация длинных документов</h3>
-                    <p class="status">Личный проект</p>
-                    <p>Map-reduce через LLM, PyMuPDF, сохранение в Markdown.</p>
+                    <h3 data-i18n="p10.title">Суммаризация длинных документов</h3>
+                    <p class="status" data-i18n="p10.status">Личный проект</p>
+                    <p data-i18n="p10.text">Map-reduce через LLM, PyMuPDF, сохранение в Markdown.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Дообучение LLM</h3>
-                    <p class="status">Учебные эксперименты</p>
-                    <p>LoRA / QLoRA для LLaMA и Mistral, промпт-инжиниринг, оценка качества.</p>
+                    <h3 data-i18n="p11.title">Дообучение LLM</h3>
+                    <p class="status" data-i18n="p11.status">Учебные эксперименты</p>
+                    <p data-i18n="p11.text">LoRA / QLoRA для LLaMA и Mistral, промпт-инжиниринг, оценка качества.</p>
                 </article>
                 <article class="project-item">
-                    <h3>Оценка RAG</h3>
-                    <p class="status">Для пилота</p>
-                    <p>Ручная разметка, точность, полнота и доля автоматических ответов.</p>
+                    <h3 data-i18n="p12.title">Оценка RAG</h3>
+                    <p class="status" data-i18n="p12.status">Для пилота</p>
+                    <p data-i18n="p12.text">Ручная разметка, точность, полнота и доля автоматических ответов.</p>
                 </article>
             </div>
         </section>
 
         <section class="card">
-            <h2>Образование</h2>
-            <h3>Уфимский университет науки и технологий</h3>
-            <p>Выпускник. Подпрофиль: интеллектуальный анализ данных и машинное обучение.</p>
-            <p>Курсы: computer vision, классический ML, NLP, Python в статистическом анализе, распознавание образов, проектный менеджмент.</p>
-            <p class="metric">Средний балл: <strong>4,78</strong></p>
-            <h3 class="edu-second">Казанский национальный исследовательский технический университет им. А. Н. Туполева</h3>
-            <p>1 курс магистратуры. Профиль: искусственный интеллект в решении прикладных задач.</p>
+            <h2 data-i18n="edu.title">Образование</h2>
+            <h3 data-i18n="edu.uust">Уфимский университет науки и технологий</h3>
+            <p data-i18n="edu.uust.desc">Выпускник. Подпрофиль: интеллектуальный анализ данных и машинное обучение.</p>
+            <p data-i18n="edu.uust.courses">Курсы: computer vision, классический ML, NLP, Python в статистическом анализе, распознавание образов, проектный менеджмент.</p>
+            <p class="metric"><span data-i18n="edu.gpa">Средний балл:</span> <strong data-i18n="edu.gpaValue">4,78</strong></p>
+            <h3 class="edu-second" data-i18n="edu.kai">Казанский национальный исследовательский технический университет им. А. Н. Туполева</h3>
+            <p data-i18n="edu.kai.desc">1 курс магистратуры. Профиль: искусственный интеллект в решении прикладных задач.</p>
         </section>
 
         <section class="grid-bottom">
             <article class="card">
-                <h2>Ожидания</h2>
-                <p>Зарплата: <strong>75–95 тыс. ₽ на руки</strong>, обсуждается по задачам и формату.</p>
+                <h2 data-i18n="expectations.title">Ожидания</h2>
+                <p data-i18n="expectations.salary">Зарплата: 75–95 тыс. ₽ на руки, обсуждается по задачам и формату.</p>
                 <ul>
-                    <li>Важнее сильная команда и прикладные задачи в ML/DS.</li>
-                    <li>Готов к тестовому заданию и техническому собеседованию.</li>
+                    <li data-i18n="expectations.l1">Важнее сильная команда и прикладные задачи в ML/DS.</li>
+                    <li data-i18n="expectations.l2">Готов к тестовому заданию и техническому собеседованию.</li>
                 </ul>
             </article>
 
             <article class="card download-card">
-                <h2>Скачать резюме</h2>
-                <p class="download-text">Текстовая версия для отклика — без вёрстки, удобно вложить в письмо.</p>
-                <a class="btn primary download-btn" href="resume-eremenko-stanislav.txt" download>Скачать резюме</a>
-                <p class="download-note">Формат файла: .txt</p>
+                <h2 data-i18n="download.title">Скачать резюме</h2>
+                <p class="download-text" data-i18n="download.text">Текстовая версия для отклика — без вёрстки, удобно вложить в письмо.</p>
+                <a class="btn primary download-btn" href="resume-eremenko-stanislav.txt" download data-i18n="download.btn">Скачать резюме</a>
+                <p class="download-note" data-i18n="download.note">Формат файла: .txt</p>
             </article>
         </section>
 
         <footer class="card footer">
-            <p>Контакты: <a href="mailto:e.stasik2004@mail.ru">e.stasik2004@mail.ru</a> · <a href="tel:+79279436361">+7 927 943-63-61</a> · <a href="https://github.com/Eremenko-S-V" target="_blank" rel="noopener noreferrer">github.com/Eremenko-S-V</a></p>
+            <p><span data-i18n="footer.prefix">Контакты:</span> <a href="mailto:e.stasik2004@mail.ru">e.stasik2004@mail.ru</a> · <a href="tel:+79279436361">+7 927 943-63-61</a> · <a href="https://github.com/Eremenko-S-V" target="_blank" rel="noopener noreferrer">github.com/Eremenko-S-V</a></p>
         </footer>
     </main>
+    <script src="i18n.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 </html>

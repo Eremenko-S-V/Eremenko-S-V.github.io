@@ -1,0 +1,74 @@
+STANISLAV EREMENKO
+Junior ML / Data Science
+Location: Kazan, Russia
+
+Contacts:
+Email: e.stasik2004@mail.ru
+Phone: +7 927 943-63-61
+GitHub: https://github.com/Eremenko-S-V
+
+Profile:
+Junior specialist in machine learning and data analysis.
+I currently lead a grant project on optical flow, deformation fields, and a measurement setup.
+In parallel I build RAG, LLM, and local-model pilots.
+
+Core skills:
+- Python, C, SQL, PostgreSQL
+- Machine Learning, Computer Vision, NLP
+- LLM, RAG, Ollama
+- Linux, Docker, ESP32
+
+Experience:
+ML Engineer, Project Lead — UMNIK grant
+10 May 2026 — present
+Automated measurement setup: stereo vision, optical flow, and mechanical property estimation.
+
+Project leadership:
+- Built the team and assigned roles and tasks.
+- Plan development stages and track deadlines and outcomes.
+- Prepare reports for the foundation and defend interim results.
+- Organize work on the measurement setup.
+
+ML development:
+- Select and adapt optical-flow networks: SEA-RAFT, ResNet, 4D cost volume.
+- Train the model on mechanical-test data and improve robustness to noise.
+- Evaluate accuracy, post-process results, and compute mechanical properties from 3D deformation fields.
+- Integrate the ML stack with the optical system, stereo cameras, and software.
+
+Integration and engineering:
+- Connect stereo cameras, a rigid baseline, a Linux mini-PC, and microcontrollers.
+- Keep work reproducible: document code and pipelines.
+
+Microcontroller Programming Intern — INTAS COMPANY LLC
+16 Jan 2025 — 15 Sep 2025
+- ESP32 / ESP8266 / Arduino: sensors, relays, MQTT, Telegram alerts.
+- Contributed to an automated setup for the oil and gas industry.
+- Ubuntu/Debian, Docker, systemd, Nginx, backups, monitoring; local services and a GPU environment for ML.
+
+ML / LLM practice (pilots, coursework, personal projects):
+- Local GPT: Ollama + Open WebUI, Llama 3.1, Qwen 2.5, Mistral. Notes and documents without the cloud.
+- RAG over personal notes: LangChain + Chroma/Qdrant + Ollama. Used daily.
+- Coding assistant: Continue.dev + Qwen Coder locally. Used at work.
+- Telegram bot for a local LLM: aiogram + Ollama API, history in SQLite.
+- Knowledge-base RAG assistant: Confluence/Notion/PDF, Qdrant/FAISS, answers grounded in sources. Pilot.
+- Ticket classification: RuBERT/RoBERTa + CatBoost, LLM summary, Jira/Bitrix24 API. Coursework/pilot.
+- Document data extraction: OCR + LLM, Pydantic, confidence score. Invoice pilot.
+- Text-to-SQL: LLM, read-only, validation. Pilot, simple queries.
+- Meeting summarization: Whisper + LLM, Pydantic, Notion/Telegram. Personal project.
+- Long-document summarization: map-reduce, PyMuPDF. Personal project.
+- LLM fine-tuning: LoRA/QLoRA for LLaMA/Mistral. Learning experiments.
+- RAG evaluation: manual labels, precision, recall, share of automatic answers.
+
+Education:
+Ufa University of Science and Technology
+Graduate. Track: data mining and machine learning.
+Courses: computer vision, classical ML, NLP, Python for statistical analysis, pattern recognition, project management.
+GPA: 4.78
+
+Kazan National Research Technical University named after A. N. Tupolev
+1st-year Master’s student. Track: artificial intelligence for applied problems.
+
+Expectations:
+Salary: 75–95k RUB net, negotiable by role and scope.
+Priority — a strong team and applied ML/DS work.
+Ready for a take-home task and a technical interview.
